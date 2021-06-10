@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: #000;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 17%;
+  grid-template-rows: auto 1fr;
+  padding: 1em;
+}
+
+.input {
+  width: 100%;
+  height: 45vh;
+  grid-column: 1 / 3;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  position: relative;
+}
+
+.input > input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 58px;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.operations {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  border-radius: 1000px;
+}
+
+button:active {
+  background-color: #ffffff32;
+}
+
+.numbers > button:nth-child(10) {
+  grid-column: 1 / 3;
+  width: 100%;
+}
+
+.operations > button {
+  color: #FF6600;
+}
+
+.operations > button:last-of-type {
+  color: #fff;
+  background-color: #FF6600;
+}
